@@ -16,9 +16,9 @@ public class SelectBrowser {
 	@Parameters({"browser","url","VUsername","VPassword"})	
   @Test
  
-  public void method1(String browser,String url,String usn , String pwd) {
+  public void method1(String browserValue,String url,String usn , String pwd) {
 		
-		if(browser.equalsIgnoreCase("chrome"))
+		if(browserValue.equalsIgnoreCase("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 			driver = new ChromeDriver();
@@ -30,7 +30,7 @@ public class SelectBrowser {
 			driver.findElement(By.id("loginButton")).click();
 		}
 		
-	   else if(browser.equalsIgnoreCase("Edge"))
+	   else if(browserValue.equalsIgnoreCase("Edge"))
 	   {
 		   System.setProperty("webdriver.edge.driver","./drivers/msedgedriver.exe");
 		   driver = new EdgeDriver();
@@ -41,10 +41,5 @@ public class SelectBrowser {
 			driver.findElement(By.name("pwd")).sendKeys(pwd);
 			driver.findElement(By.id("loginButton")).click();
 	   }
-	   
-	   else
-	   {
-			System.out.println("invalid browser!!");
-		}
   }
 }

@@ -61,11 +61,6 @@ public class FileUploadPopup2 {
 		// close the browser
 	//	driver.quit();
 
-
-
-
-
-
 	}
 
 
