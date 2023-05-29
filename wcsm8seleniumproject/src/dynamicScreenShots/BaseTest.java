@@ -1,5 +1,7 @@
 package dynamicScreenShots;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import java.io.File;
 import java.time.Duration;
 
@@ -7,8 +9,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import com.google.common.io.Files;
@@ -22,7 +22,7 @@ public class BaseTest {
 	  System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
   }
   
-  @BeforeMethod
+@BeforeMethod
   public void setUp()
   {
 	  driver= new ChromeDriver();
@@ -31,22 +31,24 @@ public class BaseTest {
 	  driver.get("http://desktop-iceiogc/login.do");
   }
   
+//create the generic reusable method to take ScreenShot
+
   public void failedMethod(String failedMethod)
   {
-	  try
-	  {
+	 try
+	 {
 	  TakesScreenshot ts = (TakesScreenshot)driver;
 	  File src = ts.getScreenshotAs(OutputType.FILE);
 	  File dest = new File("./ScreenShots/"+failedMethod+".png");
 	  Files.copy(src, dest);
-	  }
+	 }
 	  
-	  catch (Exception e) {
-		
+	  catch (Exception e) {	
+		  	
 	}
   }
   
-  @AfterMethod
+@AfterMethod
   public void tearDown() throws InterruptedException
   {
 	  Thread.sleep(2000);

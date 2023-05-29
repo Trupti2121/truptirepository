@@ -14,7 +14,7 @@ public class CustomListeners extends BaseTest implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		
+		Reporter.log("Test Case executed successfully",true);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class CustomListeners extends BaseTest implements ITestListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		
+		Reporter.log("Test Case skipped",true);
 	}
 
 	@Override
@@ -41,12 +41,12 @@ public class CustomListeners extends BaseTest implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-		
+		Reporter.log("Test Case started",true);
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		
+		Reporter.log("Test Case finished",true);
 	}
   
   

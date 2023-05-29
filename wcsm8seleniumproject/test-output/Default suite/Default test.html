@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 27 15:09:36 IST 2023</td>
+<td>Started on:</td><td>Mon May 29 15:32:59 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>6 seconds (6657 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6113 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='dynamicScreenShots.TestCase.login()'><b>login</b><br>Test class: dynamicScreenShots.TestCase<br/>
-<a href="#Output-1067936865" onClick='toggleBox("Output-1067936865", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1067936865" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1067936865">
-loginThis is the failed method of test case<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.fail(Assert.java:95)
-	at dynamicScreenShots.TestCase.login(TestCase.java:17)
+<td title='dynamicScreenShots.AssertionInTestNG.login()'><b>login</b><br>Test class: dynamicScreenShots.AssertionInTestNG</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	expected [idontknow] but found [actiTIME - Login]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at dynamicScreenShots.AssertionInTestNG.login(AssertionInTestNG.java:67)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,11 +109,12 @@ loginThis is the failed method of test case<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1067936865", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1067936865'><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.fail(Assert.java:95)
-	at dynamicScreenShots.TestCase.login(TestCase.java:17)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1759313234", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1759313234'><pre>java.lang.AssertionError: The following asserts failed:
+	expected [idontknow] but found [actiTIME - Login]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at dynamicScreenShots.AssertionInTestNG.login(AssertionInTestNG.java:67)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -149,8 +144,8 @@ loginThis is the failed method of test case<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>dynamicScreenShots.TestCase@101952da</td></tr>
+<td>1</td>
+<td>dynamicScreenShots.AssertionInTestNG@2df9b86</td></tr>
 </table><p>
 </body>
 </html>
